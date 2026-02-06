@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomIconButton extends StatelessWidget {
-  final IconData icon;
+  final String icon;
   final VoidCallback? onPressed;
   final Color? color;
   final double? size;
@@ -27,10 +27,11 @@ class CustomIconButton extends StatelessWidget {
               height: 20.h,
               child: const CircularProgressIndicator(strokeWidth: 2),
             )
-          : Icon(
+          : Image.asset(
               icon,
               color: color ?? Theme.of(context).colorScheme.primary,
-              size: size ?? 24.sp,
+              width: size ?? 24.sp,
+              height: size ?? 24.sp,
             ),
     );
   }

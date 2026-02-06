@@ -1,3 +1,4 @@
+import 'package:ai_chat_app/core/constants/app_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/widgets/custom_button.dart';
@@ -34,16 +35,7 @@ class _ChatInputState extends State<ChatInput> {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.all(8.w),
-      decoration: BoxDecoration(
-        color: Theme.of(context).scaffoldBackgroundColor,
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.05),
-            blurRadius: 10,
-            offset: const Offset(0, -2),
-          ),
-        ],
-      ),
+
       child: SafeArea(
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.end,
@@ -52,7 +44,7 @@ class _ChatInputState extends State<ChatInput> {
             Expanded(
               child: CustomTextField(
                 controller: _controller,
-                hintText: 'Type a message...',
+                hintText: 'Write your message',
                 enabled: !widget.isLoading,
                 onSubmit: _handleSend,
               ),
@@ -62,7 +54,7 @@ class _ChatInputState extends State<ChatInput> {
 
             // Send button
             CustomIconButton(
-              icon: Icons.send,
+              icon: AppAssets.sendIcon,
               onPressed: _handleSend,
               isLoading: widget.isLoading,
             ),

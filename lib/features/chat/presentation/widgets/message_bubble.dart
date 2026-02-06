@@ -27,13 +27,6 @@ class MessageBubble extends StatelessWidget {
             bottomLeft: Radius.circular(isUser ? 16.r : 4.r),
             bottomRight: Radius.circular(isUser ? 4.r : 16.r),
           ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.05),
-              blurRadius: 5,
-              offset: const Offset(0, 2),
-            ),
-          ],
         ),
         child: Padding(
           padding: EdgeInsets.all(12.w),

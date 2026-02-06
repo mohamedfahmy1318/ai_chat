@@ -1,3 +1,4 @@
+import 'package:ai_chat_app/core/constants/app_assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -42,7 +43,7 @@ class _ConversationsScreenState extends State<ConversationsScreen> {
             ),
             SizedBox(width: 8.w),
             Image.asset(
-              'assets/images/logo_app.png',
+              AppAssets.logoApp,
               color: Theme.of(context).colorScheme.primary,
               width: 20.sp,
               height: 20.sp,

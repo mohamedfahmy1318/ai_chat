@@ -41,9 +41,9 @@ class AppTheme {
 
 class AppColors {
   AppColors._();
-
-  static const Color userBubble = Colors.blue;
-  static const Color modelBubble = Color(0xFFE8E8E8);
+  static const Color primary = Color(0xFF3269FF);
+  static const Color userBubble = primary;
+  static const Color modelBubble = Color(0xFFEEEEEE);
   static const Color userText = Colors.white;
   static const Color modelText = Colors.black87;
 }

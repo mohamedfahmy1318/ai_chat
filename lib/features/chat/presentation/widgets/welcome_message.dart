@@ -1,3 +1,4 @@
+import 'package:ai_chat_app/core/constants/app_assets.dart';
 import 'package:ai_chat_app/features/chat/presentation/widgets/suggest_chip.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -19,20 +20,21 @@ class WelcomeMessage extends StatelessWidget {
                 color: Theme.of(context).colorScheme.primaryContainer,
                 shape: BoxShape.circle,
               ),
-              child: Icon(
-                Icons.auto_awesome,
-                size: 48.sp,
+              child: Image.asset(
+                AppAssets.logoApp,
+                width: 48.sp,
+                height: 48.sp,
                 color: Theme.of(context).colorScheme.primary,
               ),
             ),
             SizedBox(height: 24.h),
             Text(
-              'Welcome to Ai Chat!',
+              'Welcome to AI Chat!',
               style: TextStyle(fontSize: 20.sp, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 12.h),
             Text(
-              'Send a message or image to start chatting with Gemini AI',
+              'Send a message to start chatting with Gemini AI',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 14.sp, color: Colors.grey[600]),
             ),
